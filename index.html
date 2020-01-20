@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/logo.ico">
+
+    <title>Automated Code Statement Completion</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+	 
+	 
+    <style>
+       p {
+       text-align: justify;
+       text-justify: inter-word;
+       }
+       .tt{
+       	font-size: 10pt;
+			margin-top:10pt;
+			margin-bottom:5pt;				
+			font-style: italic;
+			text-align: center;
+       }
+		 .col-md-6{
+		 	text-align: center;
+		 }
+		 h4{
+		 	margin-top: 1.5rem;
+		 }
+    </style>
+	 
+	 
+	 
+	 <!-- Global site tag (gtag.js) - Google Analytics -->
+	 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76613177-2"></script>
+	 <script>
+	   window.dataLayer = window.dataLayer || [];
+	   function gtag(){dataLayer.push(arguments);}
+	   gtag('js', new Date());
+
+	   gtag('config', 'UA-76613177-2');
+	 </script>
+	 
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color:#000000 !important">
+        <a class="navbar-brand" href="#abstract"><img src="img/logo.png" style="height:35px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#datasets">Datasets</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#results">Accuracy Comparison</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#code">Implementation</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="raw.zip">Data Before Processing</a>
+            <!-- </li>
+	<li class="nav-item">
+              <a class="nav-link" href="https://raw.githubusercontent.com/doubledoubleblind/mnick/master/example.txt">Examples</a>
+            </li> -->
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+
+      <div class="container marketing">
+        <!-- START THE FEATURETTES -->
+		  <hr/>
+        <div class="row featurette">
+			 <div class="col-md-1"></div>
+          <div class="col-md-10" id="abstract">
+				 <h2 class="featurette-heading" style="margin:2rem 2rem; text-align: center;">Combining Program Analysis and Statistical
+Language Model for Code Statement Completion</h2>
+             <p class="lead">
+					 Automatic code completion helps improve developers’ productivity in their programming tasks. A program contains instructions expressed via code statements, which are considered as the basic units of program execution. In this paper, we introduce AutoSC, which combines program analysis and the principle of software naturalness to fill in partially completed statements. AutoSC benefits from the strengths of both directions, in which the completed code statement is both frequent and valid. AutoSC is first trained on a code corpus to learn the templates of candidate statements. Then, it uses program analysis to validate and concretize the templates into syntactically and type-valid candidate statements. Finally, these candidates are ranked by using a language model trained on the lexical form of the source code in the code corpus. 
+             </p>
+             <p class="lead">
+                Our empirical evaluation shows that AutoSC achieves 38.9–41.3% top-1 and 48.2-50.1% top-5 accuracy in statement completion and outperforms the state-of-the-art approach from 9X–69X in top-1 accuracy.
+             </p>
+          </div>
+			 <div class="col-md-1"></div>
+        </div>
+
+        <hr class="featurette-divider">
+		  
+		  
+		  <h3 class="featurette-heading" id="datasets" style="margin-top:0rem;margin-bottom:2.5rem; text-align: center; font-size:35px;">Datasets</h3>
+        <div class="row featurette">
+           <div class="col-md-3 order-md-2"></div>
+           <div class="col-md-6 order-md-2">
+				 
+					 
+             <table class="table">
+                <thead>
+                   <tr>
+						 	  <th>Project</th>
+						     <th>Link</th>
+                   </tr>
+                </thead>
+                <tbody>
+						 <tr>
+						     <td>Ant</td>
+						     <td><a href="http://ant.apache.org/"> http://ant.apache.org/</a></td>
+						  </tr>
+ 						 <tr>
+ 						     <td>Batik</td>
+ 						     <td><a href="http://xmlgraphics.apache.org/batik/">	http://xmlgraphics.apache.org/batik/</a></td>
+ 						  </tr>
+ 						 <tr>
+ 						     <td>Cassandra</td>
+ 						     <td><a href="http://cassandra.apache.org/">http://cassandra.apache.org/</a></td>
+ 						  </tr>
+ 						 <tr>
+ 						     <td>Log4J</td>
+ 						     <td><a href="http://logging.apache.org/log4j/"> http://logging.apache.org/log4j/</a></td>
+ 						  </tr>
+ 						 <tr>
+ 						     <td>Lucene</td>
+ 						     <td><a href="http://lucene.apache.org/">http://lucene.apache.org/</a></td>
+ 						  </tr>
+ 						 <tr>
+ 						     <td>Maven</td>
+ 						     <td><a href="http://maven.apache.org/">http://maven.apache.org/</a></td>
+ 						  </tr>
+  						 <tr>
+  						     <td>Xalan</td>
+  						     <td><a href="http://xalan.apache.org/xalan-j/index.html">http://xalan.apache.org/xalan-j/index.html</a></td>
+  						  </tr>
+  						 <tr>
+  						     <td>Xerces</td>
+  						     <td><a href="http://xerces.apache.org/">http://xerces.apache.org/</a></td>
+  						  </tr>
+                </tbody>
+             </table>
+				 
+           </div>
+			  <div class="col-md-3 order-md-2"></div>
+        </div>
+
+        <hr class="featurette-divider">
+		  <h3 class="featurette-heading" id="results" style="margin-top:0rem;margin-bottom:2.5rem; text-align: center; font-size:35px;">Accuracy Comparison</h3>
+        <div class="row featurette">
+           <div class="col-md-3 order-md-2"></div>
+           <div class="col-md-6 order-md-2">
+				 <img alt="" src="img/accuracy.png" height="450">
+				 
+           </div>
+			  <div class="col-md-3 order-md-2"></div>
+        </div>
+
+        <hr class="featurette-divider">
+		  
+        <!-- /END THE FEATURETTES -->
+
+      </div><!-- /.container -->
+    </main>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
